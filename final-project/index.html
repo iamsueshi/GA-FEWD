@@ -1,50 +1,70 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Susan's SaaS Blog</title>
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,900' rel='stylesheet' type='text/css'>
+		<title>Magic Number Calculator</title>
 		<link rel="stylesheet" type="text/css" href="reset.css">
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>	
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
 		<nav>
-			<h1 id="logo">Susan's SaaS Blog</h1>
+			<h1 id="logo"></h1>
 			<ul id="uppernavlist">
-				<li>About</li>
-				<li>Archive</li>
-				<li>Other Resources</li>
+				<li><a href="http://www.scalevp.com/">About Scale</a></li>
 			</ul>
 		</nav>
-		<section>
-			<article class="blogpost1">
-				<h2>Blog Post #1</h2>
-				<p>Product companies, including license software companies, recognize revenues immediately upon sale and delivery of the product. Subscription companies (SaaS, Open source), sign customers up front but recognize revenue over time as the service is delivered. This is a commonplace fact, but it has unintuitive consequences in terms of how to use financial numbers to understand and assess the business. Classic sales and marketing efficiency metrics are utterly misleading.
-
-				For a product company, sales and marketing expenses produce sales that show up pretty quickly in the revenue line. As a result, a ratio like sales and marketing expense, expressed as a percentage of revenue, (S&M%) is a meaningful approximation of sales efficiency. High is bad, low is good.
-
-				For a subscription company, sales and marketing expenses drive bookings that only show up in revenues over the life of the contract (typically one year). Thus the revenue for a given quarter is by definition not a proxy for sales and marketing efficiency that quarter at all, but is the result of all the prior months and years of selling, that are now showing up in revenue.  So how do you measure current sales and marketing efficiency? What is the correct calculation and what is an acceptable number?
-
-				Sales and marketing effort attracts new customers in a quarter. The revenue then starts to show up in the financials as an increase in new subscription revenue (net of any churn), usually in the following quarter. The correct relationship to look at, is not the ratio of sales and marketing expense to revenue, but the ratio of sales and marketing expense (for a quarter) to the change in revenue for the following quarter. This makes intuitive sense as it maps to the business reality. You spend the cash and then build the annuity base in a way that only shows up in the financials over time.</p>
-			</article>
-			<aside>
-				<form>
-				  Subscribe:<br>
-				  <input type="text" name="Email">
-				  <h3>Older Posts:</h3>
-				  <ul>
-				  	<li>Blog Post #2</li>
-				  	<li>Blog Post #3</li>
-				  	<li>Blog Post #4</li>
-				  	<li>Blog Post #5</li>
-				  	<li>Blog Post #6</li>
-				  	<li>Blog Post #7</li>
-				  </ul>
-				</form>
-			</aside>
-		</section>
+		<div class="container">
+			<ul class="nav nav-tabs">
+			    <li class="active"><a data-toggle="tab" href="#home">Magic Number</a></li>
+			    <li><a data-toggle="tab" href="#menu1">Rev Growth</a></li>
+			</ul>
+			<div class="tab-content">
+    			<div id="home" class="tab-pane fade in active">
+					<div class="calculator">
+						<h2>Magic Number Calculator</h2>
+						<form>
+						  Current Qtr Revenue:
+						  <input type="text" size="10" id="currentqtr">
+						  <br>
+						  Last Qtr Revenue:
+						  <input type="text" size="13" id="lastqtr">
+						  <br>
+						  Last Qtr S&M Spend:
+						  <input type="text" size="11" id="smspend">
+						  <br>
+						  <input type="submit" id="submit">
+						  <br>
+						</form>
+					</div>
+				<div class="mnpopup"></div>
+				</div>
+			<div id="menu1" class="tab-pane fade">
+					<div class="growthcalc">
+						<h2>Growth Rate Calculator</h2>
+						<form>
+						  Current Qtr Revenue:
+						  <input type="text" size="10" id="growthcurrent">
+						  <br>
+						  Last Qtr Revenue:
+						  <input type="text" size="13" id="growthlast">
+						  <br>
+						  <input type="submit" id="calc">
+						  <br>
+						</form>
+					</div>
+				<div class="grpopup"></div>
+				</div>
+   			</div>
+   			</div>
+   		</div>
 		<footer>
-			<a href="http://facebook.com/">Facebook</a>
-			<a href="http://instagram.com/">Instagram</a>
-			<a href="http://linkedin.com/">Linkedin</a>
+			Created by: 
+			<a href="https://www.linkedin.com/in/susanwliu">Susan Liu</a>
 		</footer>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 		<script src="myscripts.js"></script>
